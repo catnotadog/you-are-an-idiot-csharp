@@ -1,0 +1,46 @@
+﻿public void move()
+        {
+            
+                moveY += gravity;
+
+                X += moveX;
+                Y += moveY;
+                Location = new Point((int)X, (int)Y);
+
+                //Check Collision
+                if (X < 0)
+                {
+                    X = 0;
+                    moveX = -moveX;
+                    moveX *= 0.75;
+                    moveY *= 0.95;
+                }
+                if (X > Screen.PrimaryScreen.WorkingArea.Width - 1 - Width)
+                {
+                    X = Screen.PrimaryScreen.WorkingArea.Width - 1 - Width;
+                    moveX = -moveX;
+                moveX *= 0.75;
+                moveY *= 0.95;
+            }
+
+                if (Y < 0)
+                {
+                    Y = 0;
+                    moveY = -moveY;
+                moveX *= 0.75;
+                moveY *= 0.95;
+            }
+            if (Y > Screen.PrimaryScreen.WorkingArea.Height - 1 - Height)
+            {
+                Y = Screen.PrimaryScreen.WorkingArea.Height - 1 - Height;
+                moveY = -moveY;
+                moveY *= 0.8;
+                moveX *= 0.95;
+            }
+
+            if (Math.Abs(moveX) < 0.1 && Math.Abs(moveY) < 0.5 && DateTime.Now.Second % 3 == 0 && Y > Screen.PrimaryScreen.WorkingArea.Height - 1 - Height - 40)
+                {
+                    Bounce();
+                }
+            
+        }
