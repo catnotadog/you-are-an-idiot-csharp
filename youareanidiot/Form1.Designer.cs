@@ -61,7 +61,6 @@ namespace youareanidiot
             this.ClientSize = new System.Drawing.Size(334, 211);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Location = new Point(rand.Next(Screen.PrimaryScreen.WorkingArea.Width), rand.Next(Screen.PrimaryScreen.WorkingArea.Height));
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "you are an idiot";

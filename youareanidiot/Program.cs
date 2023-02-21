@@ -37,8 +37,8 @@ namespace youareanidiot
         }
         public static void playaudio()
         {
-            Stream ae = System.IO.File.OpenRead("you-are-an-idiot.wav");
-            player = new SoundPlayer(ae);
+            
+            player = new SoundPlayer(youareanidiot.Properties.Resources.you_are_an_idiot);
 
             player.PlayLooping();
         }
